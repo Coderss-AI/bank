@@ -7,9 +7,9 @@ import plotly.graph_objects as go
 
 model = joblib.load("bank_model.pkl")
 
-st.header("📋 Kredit Tasdiqlash")
+st.header("Kredit Tasdiqlash")
 
-st.markdown("Mijoz ma'lumotlarini kiriting:")
+st.markdown("Ma'lumotlaringizni kiriting:")
 age = st.slider("Yosh:", 18, 100, 25)
 income = st.slider("Yillik daromad (so'm):", 10000, 1000000, 50000)
 loan_amount = st.slider("Kredit miqdori (so'm):", 1000, 500000, 20000)
