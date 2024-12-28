@@ -10,10 +10,10 @@ model = joblib.load("bank_model.pkl")
 st.header("Kredit Tasdiqlash")
 
 st.markdown("Ma'lumotlaringizni kiriting:")
-age = st.slider("Yosh:", 18, 100, 25)
-income = st.slider("Yillik daromad (so'm):", 10000, 1000000, 50000)
-loan_amount = st.slider("Kredit miqdori (so'm):", 1000, 500000, 20000)
-credit_score = st.slider("Kredit reytingi:", 300, 850, 700)
+age = st.number_input("Yosh:", 18, 100, 25)
+income = st.number_input("Yillik daromad ($):", 10000, 1000000, 50000)
+loan_amount = st.number_input("Kredit miqdori ($):", 1000, 500000, 20000)
+credit_score = st.number_input("Kredit reytingi:", 300, 850, 700)
 
 if st.button("🔮 Aniqlash"):
     features = np.array([[age, income, loan_amount, credit_score]])
